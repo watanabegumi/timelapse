@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>雄武丘陵地区青葉工区区画整理工事　現場タイムラプス | 株式会社渡辺組</title>
+<style>
+  :root{
+    --navy:#1583bd; --navy2:#0e6396; --accent:#29abe2; --bg:#f2f9fd;
+    --card:#ffffff; --text:#2c3e50; --muted:#7f8c9b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Yu Gothic UI","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;background:var(--bg);color:var(--text)}
+  header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:26px 20px 20px}
+  .wrap{max-width:1080px;margin:0 auto}
+  header h1{font-size:1.5rem;letter-spacing:.05em;display:flex;align-items:center;gap:10px}
+  header .sub{margin-top:6px;font-size:.85rem;color:#e8f4fb}
+  .brand{display:inline-block;background:#fff;border-radius:8px;padding:7px 14px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+  .brand img{height:40px;display:block}
+  .notice{background:#e8f4fb;border:1px solid #bfe0f2;color:#0e6396;font-size:.75rem;padding:5px 12px;border-radius:6px;max-width:1080px;margin:10px auto 0;text-align:center}
+  main{max-width:1080px;margin:0 auto;padding:18px 16px 40px}
+  .toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0 18px}
+  .chip{border:1px solid #c8d2e0;background:#fff;color:var(--text);border-radius:999px;padding:7px 16px;font-size:.85rem;cursor:pointer;transition:.15s}
+  .chip.active{background:var(--navy2);color:#fff;border-color:var(--navy2)}
+  .count{margin-left:auto;font-size:.8rem;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+  .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(18,116,173,.10);display:flex;flex-direction:column}
+  .player{position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(45deg,#16223c,#16223c 12px,#182741 12px,#182741 24px);cursor:pointer}
+  .player.open{cursor:default}
+  .player img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .player .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .play span{width:58px;height:58px;border-radius:50%;background:rgba(41,171,226,.95);border:2px solid rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;padding-left:4px;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:.15s}
+  .player:hover .play span{transform:scale(1.1)}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .close-btn{position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:0;background:rgba(10,25,45,.72);color:#fff;font-size:1rem;line-height:1;cursor:pointer}
+  .close-btn:hover{background:rgba(10,25,45,.92)}
+  .info{padding:12px 14px 14px}
+  .badge{display:inline-block;background:#ddf1fb;color:var(--navy2);font-size:.72rem;font-weight:700;border-radius:5px;padding:3px 8px;margin-bottom:6px}
+  .info h2{font-size:1.05rem;line-height:1.4}
+  .links{margin-top:8px;font-size:.78rem;color:var(--muted)}
+  .links a{color:#1583bd;text-decoration:none}
+  .links a:hover{text-decoration:underline}
+  .load-error{grid-column:1/-1;background:#fdecea;border:1px solid #f5b9b3;color:#a33a2f;border-radius:10px;padding:16px;font-size:.9rem;line-height:1.8}
+  footer{border-top:1px solid #d3e9f5;background:#fff;padding:18px 16px 30px}
+  footer .wrap{font-size:.8rem;color:var(--muted);line-height:1.9}
+  footer a{color:#1583bd}
+  @media (max-width:480px){ header h1{font-size:1.2rem} .brand img{height:30px} .grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iX+ODrOOCpOODpOODvF8xIiBkYXRhLW5hbWU9IuODrOOCpOODpOODvCAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODcuNTYgMTI1LjE4Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjMjMxODE1OwogICAgICB9CgogICAgICAuY2xzLTEsIC5jbHMtMiwgLmNscy0zLCAuY2xzLTQgewogICAgICAgIHN0cm9rZS13aWR0aDogMHB4OwogICAgICB9CgogICAgICAuY2xzLTIgewogICAgICAgIGZpbGw6ICNkZTA1MWI7CiAgICAgIH0KCiAgICAgIC5jbHMtMyB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgfQoKICAgICAgLmNscy00IHsKICAgICAgICBmaWxsOiAjMDA3YmM2OwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8Zz4KICAgIDxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iMTcxLjI5IiB5PSI4Mi4zOCIgd2lkdGg9IjY1LjM5IiBoZWlnaHQ9IjguODYiLz4KICAgIDxyZWN0IGNsYXNzPSJjbHMtNCIgeD0iMTcxLjI5IiB5PSI3My41MiIgd2lkdGg9IjY1LjM5IiBoZWlnaHQ9IjguODYiLz4KICAgIDxyZWN0IGNsYXNzPSJjbHMtMiIgeT0iNzMuNTIiIHdpZHRoPSI2OS45NyIgaGVpZ2h0PSI4Ljg2Ii8+CiAgICA8cmVjdCBjbGFzcz0iY2xzLTQiIHk9IjgyLjM4IiB3aWR0aD0iNjkuOTciIGhlaWdodD0iOC44NiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMjAwLjA4LDU0LjdjLTEuMzItNC43NS00LjQ5LTguNzMtOC45Mi0xMS4xOS0yLjkxLTEuNjEtNi4yMi0yLjQ3LTkuNTYtMi40Ny02Ljg0LDAtMTMuMiwzLjUzLTE2LjYxLDkuMjFsLTIuNTYsNC4yN2MtMS4zNS00LjY4LTQuNDktOC41OS04Ljg3LTExLjAyLTIuOTEtMS42MS02LjIyLTIuNDctOS41Ni0yLjQ3LTUuMzgsMC0xMC40NCwyLjIxLTE0LjAzLDUuOTItLjA2LjA1LS4xMy4wNy0uMTcuMTNsLTQ1LjU5LDQ5LjUzLDE2Ljc2LTI3LjkzYzUuMjktOC44LDIuMTQtMjAuMDktNy4wMS0yNS4xNy0yLjkxLTEuNjItNi4yMi0yLjQ3LTkuNTYtMi40Ny02LjgzLDAtMTMuMTksMy41My0xNi42LDkuMjJsLTI4LjM4LDQ3LjI4Yy01LjI5LDguOC0yLjE0LDIwLjA5LDcuMDEsMjUuMTgsMi45MSwxLjYxLDYuMjIsMi40Nyw5LjU3LDIuNDcsNi4wMSwwLDExLjY1LTIuNzQsMTUuMjQtNy4yNmw0NC42OS00OC41NS0xNi45MSwyOC4xOGMtNS4yNyw4LjgtMi4xMywyMC4wOSw3LjAyLDI1LjE3LDIuOTEsMS42MSw2LjIxLDIuNDcsOS41NiwyLjQ3LDYuODMsMCwxMy4yLTMuNTMsMTYuNjEtOS4yMmwyLjU3LTQuMjdjMS4zNSw0LjY4LDQuNDksOC41OSw4Ljg3LDExLjAyLDIuOTEsMS42Miw2LjIyLDIuNDcsOS41NywyLjQ3LDYuODMsMCwxMy4xOS0zLjUzLDE2LjYtOS4yMmwyOC4zNy00Ny4yOGMyLjU2LTQuMjYsMy4yNC05LjIzLDEuOTEtMTMuOTgiLz4KICAgIDxwYXRoIGNsYXNzPSJjbHMtNCIgZD0ibTExNS41OCwxMjAuNGMtMi40LDAtNC44NC0uNTktNy4wOC0xLjgzLTYuNzktMy43Ny05LjEyLTEyLjEyLTUuMi0xOC42NGwyOC4zNy00Ny4yOGMzLjkzLTYuNTMsMTIuNjEtOC43NiwxOS4zOS01LDYuNzgsMy43Nyw5LjExLDEyLjEyLDUuMTksMTguNjVsLTI4LjM3LDQ3LjI4Yy0yLjYzLDQuMzgtNy40LDYuODMtMTIuMzEsNi44MyIvPgogICAgPHBhdGggY2xhc3M9ImNscy0zIiBkPSJtNTUuOTgsMTIwLjRjLTIuNDEsMC00Ljg1LS41OS03LjA4LTEuODMtNi43OS0zLjc3LTkuMTItMTIuMTItNS4xOS0xOC42NGwyOC4zOC00Ny4yOGMzLjkyLTYuNTMsMTIuNTktOC43NywxOS4zOS01LDYuNzgsMy43Nyw5LjExLDEyLjEyLDUuMTksMTguNjRsLTI4LjM4LDQ3LjI4Yy0yLjYzLDQuMzgtNy40LDYuODMtMTIuMyw2LjgzIi8+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0xNTMuMTksMTIwLjRjLTIuNDEsMC00Ljg1LS41OS03LjA4LTEuODMtNi43OS0zLjc3LTkuMTItMTIuMTItNS4yLTE4LjY0bDI4LjM3LTQ3LjI4YzMuOTMtNi41MywxMi42MS04Ljc2LDE5LjM5LTUsNi43OSwzLjc3LDkuMTEsMTIuMTIsNS4yLDE4LjY1bC0yOC4zOCw0Ny4yOGMtMi42Myw0LjM4LTcuNCw2LjgzLTEyLjMsNi44MyIvPgogIDwvZz4KICA8Zz4KICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTI3MC43Myw4MS4zNmMtLjM5LDExLjktLjgzLDE3LjQ5LTMuMjcsMjIuNzEtMy40Niw2Ljk5LTguNzEsMTEuNzktMTYuNTgsMTQuNTl2LTE0LjA1YzYuNTgtNC40MSw3Ljk0LTEwLjQzLDguMTgtMjMuMjVoMTEuNjdabS4xNi0xOS41MmMtNy4xNi0uOTItNy40Mi0xLjA1LTkuNy0xLjMxLTIuNTItLjI0LTMuNDYtLjMyLTguOTctLjY5di0xMC45NWM0LjAxLjExLDYuOTUuNTUsMTguNjYsMnYxMC45NVptMCwxNS42M2MtNy4xNi0uOTItNy40Mi0xLjA1LTkuNy0xLjMxLTIuNTItLjI0LTMuNDYtLjMyLTguOTctLjY5di0xMC45NWM0LjAxLjExLDYuOTUuNTUsMTguNjYsMnYxMC45NVptMjAuODEtMjYuMzF2LTMuNjFoMTMuMDZ2My42MWgxNy45M3Y4Ljk4aC01Ljk0djMuNzZoNS45NHY5LjIyaC01Ljk0djEwLjA2aC0yNi44NXYtMTAuMDZoLTMuNzh2MTIuNDVoMzUuMTZ2OC4wNmMtMS41NywzLjIzLTUuNTEsNy4xNC05LjA0LDEwLjIxLDMuNywxLjMxLDQuMzMsMS45NCwxMC4xNSwyLjU1djExLjk3Yy02LjkyLS44NS0xNC41NS0zLjM4LTIwLjg0LTYuOTEtNC43MiwyLjc2LTEzLjQ1LDUuNTMtMjAuMzcsNi4zdi0xMC4xNGMtNC4yNSw1LjYxLTUuOTgsNi45OS0xMS43Miw5LjIydi0xNC42N2MzLjE1LTIuNzYsNC40LTYuNzYsNC41Ni0xNC40NHYtMzYuNTZoMTcuNjlabS02LjEzLDQzLjAxYy0uOTQsNS44NC0xLjczLDguNDUtMy43LDEyLjI5LDQuODctLjY5LDYuNjktMS4wOCwxMC4yMi0yLjMtMi41Mi0yLjU0LTQuNjQtNS42OC02LjUzLTkuOThabTQuMzMtMzAuMjZ2LTMuNzZoLTMuNzh2My43NmgzLjc4Wm02LjYsMzAuMzJjMS42NSwyLDIuNTIsMi44NCw1LjAzLDQuOTIsMi41OS0xLjY5LDMuNjItMi42MSw1LjY2LTQuOTJoLTEwLjdabTEwLjktMzAuMzJ2LTMuNzZoLTcuMzF2My43Nmg3LjMxWm0wLDExLjY3di0yLjQ2aC03LjMxdjIuNDZoNy4zMVoiLz4KICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTMzMi4yMSw4NC4xOHYtMTEuNjdoMTkuMTl2MjUuMjdjLjMyLDYuMDcsMi4xMiw3LjMsMTAuMDcsNy4yMmg0Mi4wOHYxMS4yMWgtNDEuNDVjLTguNTcuMTUtMTMuODUtMS42MS0xNy4yMy02LjY4LTMuNzYsNC4yMS02LjUzLDYuODItMTMuOTEsOC4xNHYtMTIuMTVjNS43NC0xLjUzLDguMzUtNi42NSw4LjI3LTEyLjE4di05LjE2aC03LjAxWm0xOS4xOS0yMC4xNWMtNy45NC0xLjMzLTExLjMyLTEuNzMtMTcuNjItMi4xNnYtMTEuNDRjNy4wOC4zOCwxMC42Mi43NiwxNy42MiwxLjg1djExLjc1Wm0zLjMtMy4xMXYtMTEuMjFoNDUuNjJjMCwyNi45Ni0uMDYsMzMuNzUtMS43MSw0MC4zNi0yLjYsOC42LTcuMDIsMTIuMDItMTkuODQsMTIuMDJoLTMuMTJ2LTExLjA2aDIuOTFjNi4xMy0uMDgsNy4wNy0xLjgxLDcuNzgtNy43My42My01LjUzLjc3LTE0LjYyLjc3LTIyLjM4aC04LjY5Yy0xLjgxLDI3LjgtNS40NCwzNC43NS0yMS45Nyw0MS42MXYtMTMuMzZjNy4xMy01LjY4LDguOC04LjgyLDkuNzQtMjguMjVoLTExLjQ4WiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtNDIyLjUsOTAuNDhjLS4xNiw4LjUzLS43MSwxNS41MS0xLjQ5LDE5LjU4aC05LjJjMS4xOC02LjMsMS40OS05LjIyLDEuNDktMTUuNjcsMC0uNjEsMC0yLjIzLS4wOC0zLjkyaDkuMjhabTExLjIyLTQyLjkzbC04LjczLDEyLjk4LDIuNDQsMy4zOCw2LjYxLTEwLjY3aDEyLjI0bC0xMi4wNCwxOC4wNWg4LjU3bDQuNzIsOC4yOS4wMiw4LjA1LTExLC4wMnYzMC40MWgtMTEuMTd2LTMwLjQxaC0xMi4yMXYtMTAuMDZoNS40MmwyLjQyLTMuMjctOC44LTEyLjcxLDguNi0xNC4wNGgxMi45MVptMS45MywzMC4wM2wtMi4zNi00Ljg0LTMuMDcsNC44NGg1LjQzWm0xMS44OCwxMi41MnYxNC45aDMuNTR2LTU1LjgzaDMyLjh2NTUuODNoMy43djExLjA2aC00MC43NHYtNi40NWgtNy40di0xOS41MWg4LjFabTI0LjMtMjEuODF2LTcuNzZoLTkuMjh2Ny43Nmg5LjI4Wm0wLDE4LjEydi03Ljk5aC05LjI4djcuOTloOS4yOFptMCwxOC41OXYtNy43NmgtOS4yOHY3Ljc2aDkuMjhaIi8+CiAgPC9nPgogIDxnPgogICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMTYyLjQ0LjM5bC02LjcxLDI2Ljg1aC03LjU5bC00LjExLTE3LjY3LTQuMjYsMTcuNjdoLTcuNTlMMTI1LjY2LjM5aDYuNzFsMy43LDE5LjU0TDE0MC42Ni4zOWg2LjlsNC40LDE5LjU0LDMuNzQtMTkuNTRoNi43NVoiLz4KICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTE2NS45NCw2LjA1Yy0uNjMtLjY0LS45NC0xLjQyLS45NC0yLjM2cy4zMS0xLjc2Ljk0LTIuNGMuNjMtLjYzLDEuNDQtLjk1LDIuNDMtLjk1czEuNzcuMzIsMi40Ljk1Yy42My42NC45NCwxLjQ0Ljk0LDIuNHMtLjMxLDEuNzItLjk0LDIuMzYtMS40My45NS0yLjQuOTUtMS44LS4zMi0yLjQzLS45NVptNS4zNSwzLjMzdjE3Ljg2aC01Ljg3VjkuMzdoNS44N1oiLz4KICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTE4Ny4xNiwyMS44M3Y1LjRoLTMuMDNjLTIuMTYsMC0zLjg0LS41Ni01LjA1LTEuNy0xLjIxLTEuMTMtMS44MS0yLjk3LTEuODEtNS41M3YtOC4yN2gtMi4zN3YtNS4yOWgyLjM3Vi4zOWg1Ljk1djYuMDZoMy45djUuMjloLTMuOXY4LjM1YzAsLjYyLjE0LDEuMDcuNDIsMS4zNC4yOC4yNy43NC40MSwxLjM5LjQxaDIuMTJaIi8+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im0zMjIuNTQsMjEuODN2NS40aC0zLjAzYy0yLjE2LDAtMy44NC0uNTYtNS4wNS0xLjctMS4yMS0xLjEzLTEuODEtMi45Ny0xLjgxLTUuNTN2LTguMjdoLTIuMzd2LTUuMjloMi4zN1YuMzloNS45NXY2LjA2aDMuOXY1LjI5aC0zLjl2OC4zNWMwLC42Mi4xNCwxLjA3LjQyLDEuMzQuMjguMjcuNzQuNDEsMS4zOS40MWgyLjEyWiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMjA3LjgsOC41OWMxLjM1LDEuNTgsMi4wMiwzLjc0LDIuMDIsNi41djEyLjE1aC01Ljkydi0xMS4yOWMwLTEuMzktLjM0LTIuNDctMS4wMS0zLjI0LS42Ny0uNzctMS41OC0xLjE1LTIuNzItMS4xNXMtMi4wNC4zOS0yLjcyLDEuMTVjLS42Ny43Ny0xLjAxLDEuODUtMS4wMSwzLjI0djExLjI5aC01Ljk1Vi4zOWg1Ljk1djguODVjLjYtLjkyLDEuNDMtMS42NSwyLjQ3LTIuMiwxLjA0LS41NSwyLjIyLS44MiwzLjUyLS44MiwyLjIzLDAsNC4wMi43OSw1LjM2LDIuMzdaIi8+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im0yMjIuNjcsMjUuNzJjLTIuMDktMS4xNy0zLjc2LTIuOC00Ljk5LTQuODktMS4yMy0yLjEtMS44NS00LjQ1LTEuODUtNy4wNnMuNjEtNC45NiwxLjg1LTcuMDVjMS4yMy0yLjA4LDIuOS0zLjcxLDQuOTktNC44NywyLjA5LTEuMTcsNC40LTEuNzUsNi45MS0xLjc1czQuODIuNTgsNi45MSwxLjc1YzIuMDksMS4xNywzLjc0LDIuNzksNC45NSw0Ljg3LDEuMjEsMi4wOCwxLjgxLDQuNDMsMS44MSw3LjA1cy0uNjEsNC45Ny0xLjgzLDcuMDZjLTEuMjIsMi4wOS0yLjg3LDMuNzMtNC45NSw0Ljg5LTIuMDgsMS4xNy00LjM4LDEuNzUtNi45LDEuNzVzLTQuODItLjU4LTYuOTEtMS43NVptMTEuODktNi40OGMxLjI1LTEuMzgsMS44Ny0zLjIxLDEuODctNS40OHMtLjYyLTQuMTMtMS44Ny01LjVjLTEuMjUtMS4zNy0yLjktMi4wNS00Ljk4LTIuMDVzLTMuNzcuNjgtNS4wMSwyLjAzYy0xLjI1LDEuMzYtMS44NywzLjItMS44Nyw1LjUycy42Miw0LjEyLDEuODcsNS41YzEuMjQsMS4zNywyLjkyLDIuMDUsNS4wMSwyLjA1czMuNzMtLjY5LDQuOTgtMi4wN1oiLz4KICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTI1Ny44NCwyNy4yNGwtNS45Mi04LjcydjguNzJoLTUuOTVWLjM5aDUuOTV2MTQuNTFsNS44OS04LjQ2aDcuMzVsLTcuNjMsMTAuNDMsNy43LDEwLjM2aC03LjM4WiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMjg0LjU3LDguNTljMS4zNSwxLjU4LDIuMDIsMy43NCwyLjAyLDYuNXYxMi4xNWgtNS45MnYtMTEuMjljMC0xLjM5LS4zNC0yLjQ3LTEuMDEtMy4yNC0uNjctLjc3LTEuNTgtMS4xNS0yLjcyLTEuMTVzLTIuMDQuMzktMi43MiwxLjE1Yy0uNjcuNzctMS4wMSwxLjg1LTEuMDEsMy4yNHYxMS4yOWgtNS45NVYuMzloNS45NXY4Ljg1Yy42LS45MiwxLjQzLTEuNjUsMi40Ny0yLjIsMS4wNC0uNTUsMi4yMi0uODIsMy41Mi0uODIsMi4yMywwLDQuMDIuNzksNS4zNiwyLjM3WiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMjkzLjYzLDI2LjQzYy0xLjUxLS44MS0yLjctMS45Ni0zLjU2LTMuNDYtLjg2LTEuNS0xLjMtMy4yNS0xLjMtNS4yNnMuNDQtMy43MywxLjMxLTUuMjRjLjg4LTEuNTEsMi4wNy0yLjY3LDMuNi0zLjQ3LDEuNTItLjgxLDMuMjMtMS4yMSw1LjEyLTEuMjFzMy41OS40LDUuMTIsMS4yMWMxLjUyLjgxLDIuNzIsMS45NiwzLjU5LDMuNDcuODgsMS41MSwxLjMxLDMuMjYsMS4zMSw1LjI0cy0uNDQsMy43My0xLjMzLDUuMjRjLS44OSwxLjUxLTIuMSwyLjY3LTMuNjMsMy40Ny0xLjUzLjgxLTMuMjQsMS4yMS01LjEzLDEuMjFzLTMuNTktLjQtNS4xLTEuMjFabTguMjYtNC45NmMuODctLjg3LDEuMzEtMi4xMiwxLjMxLTMuNzVzLS40Mi0yLjg3LTEuMjctMy43NWMtLjg1LS44Ny0xLjg5LTEuMzEtMy4xMy0xLjMxcy0yLjMyLjQzLTMuMTUsMS4yOWMtLjg0Ljg2LTEuMjUsMi4xMi0xLjI1LDMuNzdzLjQxLDIuODcsMS4yNCwzLjc1Yy44Mi44NywxLjg1LDEuMzEsMy4wOSwxLjMxczIuMy0uNDQsMy4xNy0xLjMxWiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMzI5LjA5LDI2Ljc4Yy0xLjMyLS41Ny0yLjM3LTEuMzYtMy4xMy0yLjM1LS43Ny0xLTEuMi0yLjExLTEuMjktMy4zNWg1Ljg5Yy4wNy42Ny4zOCwxLjIuOTQsMS42MS41Ni40MSwxLjI0LjYyLDIuMDUuNjIuNzQsMCwxLjMyLS4xNCwxLjcyLS40My40LS4yOS42MS0uNjYuNjEtMS4xMSwwLS41NS0uMjktLjk2LS44Ny0xLjIyLS41OC0uMjYtMS41Mi0uNTYtMi44Mi0uODgtMS4zOS0uMzItMi41NS0uNjYtMy40OC0xLjAxLS45My0uMzUtMS43My0uOTEtMi40LTEuNjgtLjY3LS43Ny0xLjAxLTEuOC0xLjAxLTMuMTEsMC0xLjEuMzEtMi4xLjkyLTMsLjYyLS45LDEuNTItMS42MiwyLjcyLTIuMTUsMS4yLS41MywyLjYyLS43OSw0LjI3LS43OSwyLjQ0LDAsNC4zNi42LDUuNzYsMS43OCwxLjQsMS4xOSwyLjIxLDIuNzcsMi40Miw0Ljc0aC01LjVjLS4wOS0uNjctLjM5LTEuMTktLjg5LTEuNTgtLjUtLjM5LTEuMTUtLjU4LTEuOTctLjU4LS43LDAtMS4yMy4xMy0xLjYuMzlzLS41Ni42Mi0uNTYsMS4wOGMwLC41NS4zLjk2Ljg5LDEuMjQuNTkuMjgsMS41MS41NSwyLjc3LjgyLDEuNDQuMzcsMi42MS43MywzLjUyLDEuMDguOS4zNiwxLjcuOTMsMi4zOSwxLjcyLjY4Ljc5LDEuMDQsMS44NSwxLjA2LDMuMTgsMCwxLjEyLS4zMiwyLjEyLS45NiwzLS42NC44OC0xLjU1LDEuNTctMi43NSwyLjA4LTEuMi41LTIuNTguNzUtNC4xNi43NS0xLjcsMC0zLjItLjI5LTQuNTMtLjg2WiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMzU1LjU5LDI3LjI0bC01LjkyLTguNzJ2OC43MmgtNS45NVYtLjMzaDUuOTV2MTUuMjRsNS44OS04LjQ2aDcuMzVsLTcuNjMsMTAuNDMsNy43LDEwLjM2aC03LjM4WiIvPgogIDwvZz4KPC9zdmc+" alt="株式会社渡辺組"></div>
+    <h1>雄武丘陵地区青葉工区区画整理工事　現場タイムラプス　ライブラリ</h1>
+    <div class="sub">株式会社渡辺組｜現場の施工の流れをタイムラプス動画でご覧いただけます</div>
+  </div>
+</header>
+<div class="notice">本ページは、株式会社渡辺組が施工する現場の記録映像を公開しています</div>
+<main>
+  <div class="toolbar" id="filterBar"></div>
+  <div class="grid" id="grid"></div>
+</main>
+<footer>
+  <div class="wrap">
+    ・掲載している映像の無断転載・二次利用はご遠慮ください。<br>
+    ・お問い合わせ：株式会社　渡辺組（<a href="https://watanabe-gumi.com/" target="_blank" rel="noopener">watanabe-gumi.com</a>）
+  </div>
+</footer>
+<script>
+// ============================================================
+// 動画リスト：動画を追加したら、ここに1行足すだけ
+//   id   : Drive共有リンクの /d/ と /view の間の文字列（ファイルID）
+//   site : 現場名（上部のフィルタボタンに使われます）
+//   date : 撮影年月「YYYY-MM」（新しい順の並び替えと「○年○月」表示に使われます）
+//   file : 元のファイル名（管理用メモ。画面には表示されません）
+//
+// ※ 注意：各行の末尾のカンマ（最後の行以外）を忘れると一覧が表示され
+//   なくなります。その場合はページに赤いエラーメッセージが出ます。
+// ============================================================
+const videos = [
+  { id: "1ITh9jCxM9Dx231LTvR3t5S6RksV-Mi8k", site: "青葉工区 29-93", date: "2026-04", file: "青葉工区29-93‗４月.mp4" },
+  { id: "1aUGnC-un6fnktktok4hO1Jq-wqfhgj1c", site: "青葉工区 29-93", date: "2026-05", file: "青葉工区29-93‗５月.mp4" },
+  { id: "1rRXZoJRYaoPgyt1Tt3ovqYjZTuV6jDqd", site: "青葉工区 29-93", date: "2026-06", file: "青葉工区29-93‗６月.mp4" },
+  { id: "1sd8Wrh5BzG1XKzzjmREsFkMJ8eqVKDO6", site: "盛土", date: "2026-06", file: "盛土タイムラプス予定‗6月.mov" }
+];
+</script>
+<script>
+(function () {
+  const grid = document.getElementById("grid");
+  const filterBar = document.getElementById("filterBar");
+
+  // 動画リストの記述ミス（カンマ抜け等）があっても真っ白にせず、原因を表示する
+  if (typeof videos === "undefined" || !Array.isArray(videos)) {
+    grid.innerHTML = '<div class="load-error">動画リストの読み込みに失敗しました。<br>' +
+      'このHTML内の「videos」リストの記述（行末のカンマ抜け・かっこの対応など）を確認してください。<br>' +
+      '直せない場合はページ管理者まで連絡してください。</div>';
+    return;
+  }
+
+  let current = "すべて";
+  let openEl = null; // いま再生中のプレーヤー（同時再生は1つまで）
+
+  function labelOf(v) {
+    const parts = v.date.split("-");
+    return parts[0] + "年" + Number(parts[1]) + "月";
+  }
+  function thumbHTML(v) {
+    return '<img src="https://drive.google.com/thumbnail?id=' + v.id + '&sz=w640" alt="" loading="lazy" onerror="this.remove()">' +
+           '<div class="play"><span>▶</span></div>';
+  }
+  function closePlayer(player) {
+    const v = videos.find(function (x) { return x.id === player.dataset.vid; });
+    player.innerHTML = thumbHTML(v);
+    player.classList.remove("open");
+    if (openEl === player) openEl = null;
+  }
+  function openPlayer(player, v) {
+    if (openEl && openEl !== player) closePlayer(openEl); // 前の再生を閉じる
+    player.innerHTML =
+      '<iframe src="https://drive.google.com/file/d/' + v.id + '/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>' +
+      '<button class="close-btn" aria-label="再生を閉じる">✕</button>';
+    player.classList.add("open");
+    player.querySelector(".close-btn").addEventListener("click", function (e) {
+      e.stopPropagation();
+      closePlayer(player);
+    });
+    openEl = player;
+  }
+
+  function render() {
+    // 現場名フィルタ
+    const sites = ["すべて"].concat(Array.from(new Set(videos.map(function (v) { return v.site; }))));
+    filterBar.innerHTML = "";
+    sites.forEach(function (s) {
+      const b = document.createElement("button");
+      b.className = "chip" + (s === current ? " active" : "");
+      b.textContent = s;
+      b.onclick = function () { current = s; render(); };
+      filterBar.appendChild(b);
+    });
+    const shown = videos
+      .filter(function (v) { return current === "すべて" || v.site === current; })
+      .slice()
+      .sort(function (a, b) { return b.date.localeCompare(a.date); }); // 新しい順
+    const c = document.createElement("span");
+    c.className = "count";
+    c.textContent = shown.length + " 本";
+    filterBar.appendChild(c);
+
+    // 動画カード
+    grid.innerHTML = "";
+    openEl = null;
+    shown.forEach(function (v) {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML =
+        '<div class="player" role="button" tabindex="0" data-vid="' + v.id + '" aria-label="' + v.site + ' ' + labelOf(v) + ' を再生">' +
+          thumbHTML(v) +
+        '</div>' +
+        '<div class="info">' +
+          '<span class="badge">' + v.site + '</span>' +
+          '<h2>' + labelOf(v) + '</h2>' +
+          '<div class="links">再生できないとき・全画面で見たいときは → <a href="https://drive.google.com/file/d/' + v.id + '/view" target="_blank" rel="noopener">Driveで開く</a></div>' +
+        '</div>';
+      const player = card.querySelector(".player");
+      player.addEventListener("click", function () {
+        if (!player.classList.contains("open")) openPlayer(player, v);
+      });
+      player.addEventListener("keydown", function (e) {
+        if ((e.key === "Enter" || e.key === " ") && !player.classList.contains("open")) {
+          e.preventDefault();
+          openPlayer(player, v);
+        }
+      });
+      grid.appendChild(card);
+    });
+  }
+
+  try {
+    render();
+  } catch (err) {
+    grid.innerHTML = '<div class="load-error">ページの表示中にエラーが発生しました：' + err.message + '<br>ページ管理者まで連絡してください。</div>';
+  }
+})();
+</script>
+</body>
+</html>
