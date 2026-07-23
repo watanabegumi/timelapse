@@ -40,6 +40,9 @@
   .links{margin-top:8px;font-size:.78rem;color:var(--muted)}
   .links a{color:#1583bd;text-decoration:none}
   .links a:hover{text-decoration:underline}
+  .fs-btn{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;padding:11px 14px;background:var(--navy);color:#fff;text-align:center;text-decoration:none;border-radius:8px;font-size:.88rem;font-weight:600;transition:.15s;min-height:44px}
+  .fs-btn:hover{background:var(--navy2)}
+  .fs-btn .icon{font-size:1.05rem;line-height:1}
   .load-error{grid-column:1/-1;background:#fdecea;border:1px solid #f5b9b3;color:#a33a2f;border-radius:10px;padding:16px;font-size:.9rem;line-height:1.8}
   footer{border-top:1px solid #d3e9f5;background:#fff;padding:18px 16px 30px}
   footer .wrap{font-size:.8rem;color:var(--muted);line-height:1.9}
@@ -117,7 +120,7 @@ const videos = [
   function openPlayer(player, v) {
     if (openEl && openEl !== player) closePlayer(openEl); // 前の再生を閉じる
     player.innerHTML =
-      '<iframe src="https://drive.google.com/file/d/' + v.id + '/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>' +
+      '<iframe src="https://drive.google.com/file/d/' + v.id + '/preview" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe>' +
       '<button class="close-btn" aria-label="再生を閉じる">✕</button>';
     player.classList.add("open");
     player.querySelector(".close-btn").addEventListener("click", function (e) {
@@ -160,7 +163,7 @@ const videos = [
         '<div class="info">' +
           '<span class="badge">' + v.site + '</span>' +
           '<h2>' + labelOf(v) + '</h2>' +
-          '<div class="links">再生できないとき・全画面で見たいときは → <a href="https://drive.google.com/file/d/' + v.id + '/view" target="_blank" rel="noopener">Driveで開く</a></div>' +
+          '<a class="fs-btn" href="https://drive.google.com/file/d/' + v.id + '/view" target="_blank" rel="noopener"><span class="icon">⛶</span>別タブでフル画面再生する</a>' +
         '</div>';
       const player = card.querySelector(".player");
       player.addEventListener("click", function () {
