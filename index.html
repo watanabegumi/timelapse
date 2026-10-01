@@ -43,6 +43,10 @@
   .fs-btn{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;padding:11px 14px;background:var(--navy);color:#fff;text-align:center;text-decoration:none;border-radius:8px;font-size:.88rem;font-weight:600;transition:.15s;min-height:44px}
   .fs-btn:hover{background:var(--navy2)}
   .fs-btn .icon{font-size:1.05rem;line-height:1}
+  [hidden]{display:none !important}
+  .sec-title{font-size:1rem;color:var(--navy2);margin:4px 0 12px;padding-left:10px;border-left:4px solid var(--accent)}
+  .grid + .sec-title{margin-top:30px}
+  .badge.digest{background:#fff1d6;color:#8a5a00;margin-left:6px}
   .load-error{grid-column:1/-1;background:#fdecea;border:1px solid #f5b9b3;color:#a33a2f;border-radius:10px;padding:16px;font-size:.9rem;line-height:1.8}
   footer{border-top:1px solid #d3e9f5;background:#fff;padding:18px 16px 30px}
   footer .wrap{font-size:.8rem;color:var(--muted);line-height:1.9}
@@ -61,6 +65,9 @@
 <div class="notice">本ページは、株式会社渡辺組が施工する現場の記録映像を公開しています</div>
 <main>
   <div class="toolbar" id="filterBar"></div>
+  <h2 class="sec-title" id="digestTitle" hidden>まとめ動画</h2>
+  <div class="grid" id="digestGrid" hidden></div>
+  <h2 class="sec-title" id="monthlyTitle" hidden>月ごとの動画</h2>
   <div class="grid" id="grid"></div>
 </main>
 <footer>
@@ -76,6 +83,8 @@
 //   site : 現場名（上部のフィルタボタンに使われます）
 //   date : 撮影年月「YYYY-MM」（新しい順の並び替えと「○年○月」表示に使われます）
 //   file : 元のファイル名（管理用メモ。画面には表示されません）
+//   until: まとめ動画だけに書く。期間の終わりの年月「YYYY-MM」
+//          （date に始まり、until に終わりを書くと「まとめ動画」の段に表示されます）
 //
 // ※ 注意：各行の末尾のカンマ（最後の行以外）を忘れると一覧が表示され
 //   なくなります。その場合はページに赤いエラーメッセージが出ます。
@@ -86,15 +95,23 @@ const videos = [
   { id: "1rRXZoJRYaoPgyt1Tt3ovqYjZTuV6jDqd", site: "青葉工区 29-93", date: "2026-06", file: "青葉工区29-93‗６月.mp4" },
   { id: "1xIr9wQdeEu0gnpzgi_nBovjA0ETRPmcD", site: "青葉工区 29-93", date: "2026-07", file: "青葉工区29-93_７月.mp4" },
   { id: "1t7CqNh6R-mWZPDRKGeYcV5FHEXARf1PD", site: "青葉工区 29-93", date: "2026-08", file: "青葉工区29-93_８月.mp4" },
+  { id: "1oiidQu21c4ngBQfoNP4aU7pTPhJFF1Uc", site: "青葉工区 29-93", date: "2026-09", file: "青葉工区29-93_９月.mp4" },
   { id: "1sd8Wrh5BzG1XKzzjmREsFkMJ8eqVKDO6", site: "盛土", date: "2026-06", file: "盛土タイムラプス予定‗6月.mov" },
   { id: "1E8f5JRrFAjIgGSx7NdRQlu2WGwOvDcte", site: "盛土", date: "2026-07", file: "盛土タイムラプス予定_7月.mp4" },
-  { id: "10H60xjcUJ9ZdRj2kiDWS7YbTGECroxxL", site: "盛土", date: "2026-08", file: "盛土タイムラプス予定_8月.mp4" }
+  { id: "10H60xjcUJ9ZdRj2kiDWS7YbTGECroxxL", site: "盛土", date: "2026-08", file: "盛土タイムラプス予定_8月.mp4" },
+  { id: "192Csq3ezxULnmfg3DMQmMdMKCTX11Ma3", site: "盛土", date: "2026-09", file: "盛土タイムラプス予定_９月.mp4" },
+  // ↓ まとめ動画（until あり）
+  { id: "1IUjwgFLLLgytLFusz42QkIDqct6baZHe", site: "青葉工区 29-93", date: "2026-04", until: "2026-09", file: "青葉工区29-93_4～9月.mp4" },
+  { id: "1f0bSGJtKlWPLuDY6laLzoWNU2gb_UB-x", site: "盛土", date: "2026-06", until: "2026-09", file: "盛土タイムラプス予定_6～9月.mp4" }
 ];
 </script>
 <script>
 (function () {
   const grid = document.getElementById("grid");
   const filterBar = document.getElementById("filterBar");
+  const digestGrid = document.getElementById("digestGrid");
+  const digestTitle = document.getElementById("digestTitle");
+  const monthlyTitle = document.getElementById("monthlyTitle");
 
   // 動画リストの記述ミス（カンマ抜け等）があっても真っ白にせず、原因を表示する
   if (typeof videos === "undefined" || !Array.isArray(videos)) {
@@ -108,8 +125,11 @@ const videos = [
   let openEl = null; // いま再生中のプレーヤー（同時再生は1つまで）
 
   function labelOf(v) {
-    const parts = v.date.split("-");
-    return parts[0] + "年" + Number(parts[1]) + "月";
+    const s = v.date.split("-");
+    const from = s[0] + "年" + Number(s[1]) + "月";
+    if (!v.until) return from;
+    const e = v.until.split("-");
+    return from + "〜" + (e[0] === s[0] ? "" : e[0] + "年") + Number(e[1]) + "月";
   }
   function thumbHTML(v) {
     return '<img src="https://drive.google.com/thumbnail?id=' + v.id + '&sz=w640" alt="" loading="lazy" onerror="this.remove()">' +
@@ -148,16 +168,29 @@ const videos = [
     const shown = videos
       .filter(function (v) { return current === "すべて" || v.site === current; })
       .slice()
-      .sort(function (a, b) { return b.date.localeCompare(a.date); }); // 新しい順
+      .sort(function (a, b) { return (b.until || b.date).localeCompare(a.until || a.date); }); // 新しい順
+    const digests = shown.filter(function (v) { return v.until; });
+    const monthly = shown.filter(function (v) { return !v.until; });
     const c = document.createElement("span");
     c.className = "count";
     c.textContent = shown.length + " 本";
     filterBar.appendChild(c);
 
+    // まとめ動画がない絞り込みでは見出しを出さず、従来どおりの1段表示にする
+    const hasDigest = digests.length > 0;
+    digestTitle.hidden = !hasDigest;
+    digestGrid.hidden = !hasDigest;
+    monthlyTitle.hidden = !hasDigest;
+
     // 動画カード
     grid.innerHTML = "";
+    digestGrid.innerHTML = "";
     openEl = null;
-    shown.forEach(function (v) {
+    digests.forEach(function (v) { digestGrid.appendChild(makeCard(v)); });
+    monthly.forEach(function (v) { grid.appendChild(makeCard(v)); });
+  }
+
+  function makeCard(v) {
       const card = document.createElement("div");
       card.className = "card";
       card.innerHTML =
@@ -166,6 +199,7 @@ const videos = [
         '</div>' +
         '<div class="info">' +
           '<span class="badge">' + v.site + '</span>' +
+          (v.until ? '<span class="badge digest">まとめ</span>' : '') +
           '<h2>' + labelOf(v) + '</h2>' +
           '<a class="fs-btn" href="https://drive.google.com/file/d/' + v.id + '/view" target="_blank" rel="noopener"><span class="icon">⛶</span>別タブでフル画面再生する</a>' +
         '</div>';
@@ -179,8 +213,7 @@ const videos = [
           openPlayer(player, v);
         }
       });
-      grid.appendChild(card);
-    });
+      return card;
   }
 
   try {
